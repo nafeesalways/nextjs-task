@@ -1,0 +1,44 @@
+[
+  {
+   
+    "name": "Stanley Quencher H2.0 Flowstate Tumbler",
+    "category": "Drinkware",
+    "description": "Double-wall insulated, leak-proof tumbler known for maintaining beverage temperature for hours.",
+    "image_url": "https://images.unsplash.com/photo-1602143407151-711f7d7a5fc2"
+  },
+  {
+   
+    "name": "Crocs Classic Clog",
+    "category": "Footwear",
+    "description": "Lightweight, comfortable, and waterproof clog with ventilation ports, popular for casual wear.",
+    "image_url": "https://images.unsplash.com/photo-1491553895911-0055eca6402d"
+  },
+  {
+   
+    "name": "Hydrocolloid Acne Pimple Patches",
+    "category": "Beauty & Personal Care",
+    "description": "Transparent patches that protect acne and absorb impurities, designed for sensitive skin.",
+    "image_url": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c"
+  },
+  {
+   
+    "name": "Countertop Ice Maker",
+    "category": "Appliances",
+    "description": "Compact, fast ice maker producing bullet-shaped ice cubes, ideal for home kitchens.",
+    "image_url": "https://images.unsplash.com/photo-1596368708350-3d3d71ba8d2a"
+  },
+  {
+   
+    "name": "iPhone Screen Protector (Tempered Glass)",
+    "category": "Cell Phone & Accessories",
+    "description": "Durable tempered glass protector, easy to install with bubble-free design.",
+    "image_url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
+  },
+  {
+   
+    "name": "Reusable Ice Packs",
+    "category": "Sports & Outdoors",
+    "description": "Flexible, reusable ice packs for lunch boxes, injuries, and travel, quick to freeze and durable.",
+    "image_url": "https://images.unsplash.com/photo-1571902943202-506ec21330ec"
+  }
+]
