@@ -30,12 +30,6 @@ export default async function productsPage() {
                 <p className="font-bold text-xl text-green-600">
                   Price : ${item.price}
                 </p>
-                <p className="font-bold text-xl text-gray-600">
-                  Stock : {item.stock}
-                </p>
-                <p className="font-bold text-xl text-gray-600">
-                  Rating : {item.rating}
-                </p>
               </div>
               <div>
                 <Link
