@@ -1,6 +1,8 @@
 "use client"
 import React from 'react'
 
+export const dynamic = 'force-dynamic'
+
 export default  function AddProduct() {
     const handleSubmit =async(e)=>{
         e.preventDefault();
