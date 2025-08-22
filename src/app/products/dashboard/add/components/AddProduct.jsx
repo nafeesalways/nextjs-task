@@ -15,7 +15,7 @@ export default  function AddProduct() {
         const category =  form.category.value;
         const stock =  form.stock.value;
         const payload = {image,name,rating,price,category,stock}
-        const res = await fetch('http://localhost:3000/api/items',{
+        const res = await fetch('https://nextjs-task-ruddy.vercel.app/api/items',{
             method:"POST",
             body:JSON.stringify(payload),
             headers:{

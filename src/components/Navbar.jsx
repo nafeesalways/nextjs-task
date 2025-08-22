@@ -16,7 +16,7 @@ export default async function Navbar() {
         <Link href={"/"}>Home</Link>
       </li>
       <li>
-        <Link href={"about"}>About</Link>
+        <Link href={"/about"}>About</Link>
       </li>
       <li>
         <Link href={"/products"}>Products</Link>
