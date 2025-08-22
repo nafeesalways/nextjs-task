@@ -1,5 +1,6 @@
 "use client"
 import React from 'react'
+import { toast } from 'react-toastify';
 
 export const dynamic = 'force-dynamic'
 
@@ -22,22 +23,110 @@ export default  function AddProduct() {
             }
         });
         const result = await res.json();
+             toast.success("✅ Product added successfully!");
+      form.reset(); // clear form after success
         console.log(result)
     }
   return (
-    <div className='flex justify-center'>
-        <form onSubmit={handleSubmit} action="">
+   <div className="flex justify-center my-10">
+  <form
+    onSubmit={handleSubmit}
+    className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-lg border border-gray-200"
+  >
+    <h2 className="text-2xl font-semibold text-center text-green-700 mb-6">
+      Add New Product
+    </h2>
 
-            <input className=' text-green-800 border p-4 border-stone-400 w-full' type="text" name="image" placeholder='Enter Product ImageUrl' id="" />
-            <input className=' text-green-800 border p-4 border-stone-400 w-full' type="text" name="name" placeholder='Enter Product Name' id="" />
-            <input className=' text-green-800 border p-4 border-stone-400 w-full' type="number" name="rating" placeholder='Enter Product rating' id="" />
-        
-            <input className=' text-green-800 border p-4 border-stone-400 w-full' type="text" name="price" placeholder='Enter Product Price' id="" />
-            <input className=' text-green-800 border p-4 border-stone-400 w-full' type="text" name="category" placeholder='Enter Product Category' id="" />
-            <input className=' text-green-800 border p-4 border-stone-400 w-full' type="text" name="stock" placeholder='Enter Product Stock' id="" />
-            <button className='btn btn-success my-3' type='submit'>Submit</button>
-        </form>
-      
+    {/* Image */}
+    <div className="mb-4">
+      <label className="block text-sm font-medium text-gray-600 mb-2">
+        Product Image URL
+      </label>
+      <input
+        className="input input-bordered w-full focus:outline-none focus:ring-2 focus:ring-green-500"
+        type="text"
+        name="image"
+        placeholder="Enter Product Image URL"
+      />
     </div>
+
+    {/* Name */}
+    <div className="mb-4">
+      <label className="block text-sm font-medium text-gray-600 mb-2">
+        Product Name
+      </label>
+      <input
+        className="input input-bordered w-full focus:outline-none focus:ring-2 focus:ring-green-500"
+        type="text"
+        name="name"
+        placeholder="Enter Product Name"
+      />
+    </div>
+
+    {/* Rating */}
+    <div className="mb-4">
+      <label className="block text-sm font-medium text-gray-600 mb-2">
+        Rating
+      </label>
+      <input
+        className="input input-bordered w-full focus:outline-none focus:ring-2 focus:ring-green-500"
+        type="number"
+        name="rating"
+        placeholder="Enter Product Rating"
+        step="0.1"
+        min="0"
+        max="5"
+      />
+    </div>
+
+    {/* Price */}
+    <div className="mb-4">
+      <label className="block text-sm font-medium text-gray-600 mb-2">
+        Price
+      </label>
+      <input
+        className="input input-bordered w-full focus:outline-none focus:ring-2 focus:ring-green-500"
+        type="number"
+        name="price"
+        placeholder="Enter Product Price"
+      />
+    </div>
+
+    {/* Category */}
+    <div className="mb-4">
+      <label className="block text-sm font-medium text-gray-600 mb-2">
+        Category
+      </label>
+      <input
+        className="input input-bordered w-full focus:outline-none focus:ring-2 focus:ring-green-500"
+        type="text"
+        name="category"
+        placeholder="Enter Product Category"
+      />
+    </div>
+
+    {/* Stock */}
+    <div className="mb-4">
+      <label className="block text-sm font-medium text-gray-600 mb-2">
+        Stock
+      </label>
+      <input
+        className="input input-bordered w-full focus:outline-none focus:ring-2 focus:ring-green-500"
+        type="number"
+        name="stock"
+        placeholder="Enter Product Stock"
+      />
+    </div>
+
+    {/* Submit */}
+    <button
+      className="btn btn-success w-full mt-4 text-lg font-semibold"
+      type="submit"
+    >
+      Submit Product
+    </button>
+  </form>
+</div>
+
   )
 }
