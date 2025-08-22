@@ -7,23 +7,34 @@ export default async function ProductsDetailsPage({params}) {
     const productsCollection = dbConnect(collectionNamesObj.productsCollection);
     const data = await productsCollection.findOne({_id: new ObjectId(p.id)})
   return (
- <div className="mx-auto bg-base-100 w-96 shadow-sm">
-  <figure>
+<div className="card mx-auto bg-base-100 w-96 shadow-md hover:shadow-lg transition-all duration-300">
+  {/* Product Image */}
+  <figure className="px-6 pt-6">
     <img
       src={data.image}
-      alt="Shoes" />
+      alt={data.name}
+      className="rounded-xl h-48 object-cover w-full"
+    />
   </figure>
+
+  {/* Card Body */}
   <div className="card-body">
-    <h2 className="card-title">
-     {data.name}
+    {/* Title + Category */}
+    <h2 className="card-title text-lg font-semibold text-blue-600">
+      {data.name}
       <div className="badge badge-secondary">{data.category}</div>
-      <p>${data.price}</p>
     </h2>
-    <div className="card-actions justify-end">
-      <div className="badge badge-outline">{data.stock}</div>
-      <div className="badge badge-outline">{data.rating}</div>
+
+    {/* Price */}
+    <p className="text-green-600 font-bold text-xl">${data.price}</p>
+
+    {/* Stock & Rating */}
+    <div className="card-actions justify-between mt-2">
+      <div className="badge badge-outline">Stock: {data.stock}</div>
+      <div className="badge badge-outline">⭐ {data.rating}</div>
     </div>
   </div>
 </div>
+
   )
 }
