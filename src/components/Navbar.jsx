@@ -1,3 +1,5 @@
+ 
+
 import Link from "next/link";
 import React from "react";
 import Login from "./Login";
@@ -18,6 +20,9 @@ export default async function Navbar() {
       </li>
       <li>
         <Link href={"/products"}>Products</Link>
+      </li>
+      <li>
+        <Link href={"/products/dashboard/add"}>Add Products</Link>
       </li>
     </>
   );
