@@ -1,5 +1,3 @@
- 
-
 import Link from "next/link";
 import React from "react";
 import Login from "./Login";
@@ -7,9 +5,8 @@ import { authOptions } from "@/lib/authOptions";
 import Logout from "./Logout";
 import { getServerSession } from "next-auth";
 
-
 export default async function Navbar() {
-   const session = await getServerSession(authOptions);
+  const session = await getServerSession(authOptions);
   const navItems = (
     <>
       <li>
@@ -67,8 +64,7 @@ export default async function Navbar() {
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
-       {session?.user ? <Logout></Logout> :  <Login></Login>}
-    
+        {session?.user ? <Logout></Logout> : <Login></Login>}
       </div>
     </div>
   );
